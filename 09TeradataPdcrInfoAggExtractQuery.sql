@@ -101,7 +101,7 @@ WHERE (
         OR a.TotalIOCount > 0
     )
     AND a.NumSteps > 0
-    AND a.LogDate >= date - ${pdcr_history_days}
+    AND a.LogDate >= date - 180
 GROUP BY 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
 UNION ALL
 SELECT 'Summary' (CHAR(7)) as LogType,
